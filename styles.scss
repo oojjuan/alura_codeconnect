@@ -1,0 +1,249 @@
+$background-color: #00090E;
+$text-color: #E1E1E1;
+$primary-color: #81FE88;
+$secondary-color: #888888;
+$tertiary-color: #132E35;
+$tag-color: #171D1F;
+$itens-background: #171D1F;
+$font-family: "Prompt", sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $font-family;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    height: 100vh;
+    gap: 27px;
+    padding: 56px 0;
+}
+
+aside {
+    background-color: $itens-background;
+    border-radius: 10px;
+    height: 100%;
+    padding: 40px 16px;
+    text-align: center;
+}
+
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+    align-items: center;
+    list-style-type: none;
+    
+    li a {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: 22px;
+    }
+
+    li:first-of-type a {
+        color: $primary-color;
+        &:hover {
+            color: $tertiary-color;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.link-destaque {
+    border: 1px solid $primary-color;
+    padding: 12px 30px;
+    border-radius: 8px;
+}
+
+main {
+    background-color: $itens-background;
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+}
+
+h2 {
+    font: {
+        size: 26px;
+        weight: 600px
+    }
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex; 
+    flex-direction: column;
+    gap: 24px;
+    div label {
+        font: {
+            size: 18px;
+            weight: 8px;
+        }
+        display: block;
+        margin-bottom: 8px;
+    }
+    div input, textarea {
+        width: 100%;
+        padding: 8px 16px;
+        background-color: $secondary-color;
+        border: none;
+        border-radius: 4px;
+        font-family: $font-family;
+        line-height: 22.5px;
+    }
+    div input {
+        height: 39px;
+    }
+    div textarea {
+        height: 161px;
+    }
+}
+
+
+.lista-tags {
+    display: flex;
+    li {
+        display: flex;
+        background-color: $secondary-color;
+        color: $background-color;
+        gap: 10px;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+}
+
+.container-botoes {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    button {
+        width: 50%;
+        padding: 12px 32px 12px 12px;
+        text-align: center;
+        border-radius: 8px;
+        font: {
+            family: $font-family;
+            size: 18px;
+            weight: 500 
+        }
+    }
+}
+
+
+.botao-descartar {
+    background-color: $background-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    position: relative;
+    &::after {
+        content: "";
+        background: {
+            image: url("./img/trash.svg");
+            size: contain;
+            repeat: no-repeat;
+        }
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 8px;
+    }
+}
+
+.botao-publicar {
+    background-color: $primary-color;
+    color: $tertiary-color;
+    position: relative;
+    border: 1px solid $tertiary-color;
+    &::after {
+        content: "";
+        background: {
+            image: url("./img/arrow_forward2.svg");
+            size: contain;
+            repeat: no-repeat;
+        }
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 8px;
+    }
+}
+
+.container-descricao {
+    width: 422px;
+}
+
+.main-imagem {
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-imagem {
+    height: 368px;
+    padding: 24px 16px;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    &-nome {
+        display: flex;
+        gap: 8px;
+        color: $secondary-color;
+        font-size: 15px;
+    }
+}
+
+.container-upload-imagem button {
+    margin: 16px 0 8px 0;
+    background-color: $itens-background;
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    color: $secondary-color;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font: {
+        family: $font-family;
+        weight: 600;
+        size: 18px;
+    }
+    position: relative;
+    &::after {
+        content: "";
+        background: {
+            image: url("./img/upload.svg");
+            size: contain;
+            repeat: no-repeat;
+        }
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 8px;
+    }
+}
+
+
+
+
